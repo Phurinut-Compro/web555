@@ -1,0 +1,158 @@
+body {
+    background-color: #f0f8ff; /* สีพื้นหลังอ่อน */
+    color: #333; /* สีตัวอักษร */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Admin dashboard container */
+.admin-dashboard-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap; /* For responsive wrapping */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.sidebar h2 {
+    color: #ffffff;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    color: #ffdd57;
+}
+
+/* Admin content */
+.admin-content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.admin-content h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ff6f61;
+}
+
+h2 {
+    color: #6a11cb;
+}
+
+/* Form styles */
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #ff6f61; /* สีของปุ่ม */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff3b30; /* สีเข้มกว่าเมื่อเลื่อนเมาส์ไป */
+}
+
+img {
+    margin-top: 10px;
+    max-width: 100%; /* ทำให้ภาพมีขนาดไม่เกินความกว้างของฟอร์ม */
+    height: auto; /* ปรับสูงให้เหมาะสม */
+}
+
+/* Footer */
+.footer {
+    background-color: #6a11cb;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Responsive styles */
+@media (max-width: 375px) {
+    .admin-dashboard-container {
+        flex-direction: column; /* Stack sidebar and content vertically */
+        padding: 0; /* Remove extra padding */
+        width: 100vw; /* Full width of the screen */
+        box-sizing: border-box;
+    }
+
+    .sidebar, .admin-content, .footer {
+        width: 100vw; /* Full width for sidebar, content, and footer */
+        margin: 0;
+        padding: 10px;
+        box-sizing: border-box; /* Ensure padding is included within width */
+    }
+
+    table, th, td {
+        font-size: 14px; /* Reduce font size for smaller screens */
+        padding: 8px;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .footer {
+        text-align: center;
+        padding: 10px 0;
+        background-color: #6a11cb;
+        color: white;
+        width: 100vw; /* Ensure footer is full width */
+    }
+}

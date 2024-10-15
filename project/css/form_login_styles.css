@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px; /* กำหนด max-width ให้ไม่เกิน 600px เพื่อทำให้ฟอร์มแคบลงในหน้าจอใหญ่ */
+    margin-top:3%;
+	margin-left:auto;
+	margin-right:auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column; /* ปรับเป็นคอลัมน์เพื่อทำให้ฟอร์มเรียงแนวตั้ง */
+    align-items: center;
+	margin-right:5%;
+}
+
+.form-group {
+    width: 100%; /* ปรับให้ฟอร์มยืดเต็มที่ */
+    margin-bottom: 0px;
+}
+
+.form-group input {
+    width: 100%; /* ฟอร์ม input กว้างเต็มที่ */
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.30);
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between; /* กระจายปุ่มให้ห่างกัน */
+    width: 100%; /* ปุ่มใช้พื้นที่เต็ม */
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    flex: 1; /* ให้ปุ่มมีความกว้างเท่ากัน */
+    display: flex;
+    justify-content: center; /* จัดข้อความให้อยู่ตรงกลางแนวนอน */
+    align-items: center; /* จัดข้อความให้อยู่ตรงกลางแนวตั้ง */
+    margin-right: 10px; /* เพิ่มช่องว่างระหว่างปุ่ม */
+    white-space: nowrap; /* ป้องกันการตัดบรรทัด */
+}
+
+button.secondary {
+    background-color: #6c757d; /* ปรับสีของปุ่ม "ย้อนกลับ" */
+}
+
+button.primary {
+    background-color: #007bff; /* ปรับสีของปุ่ม "เข้าสู่ระบบ" */
+}
+
+button.forgot {
+    background-color: #F00; /* ปรับสีของปุ่ม "ลืมรหัสผ่าน" */
+}
+button.last {
+    background-color: #0F0; /* ปรับสีของปุ่ม "ลืมรหัสผ่าน" */
+}
+button:hover {
+    opacity: 0.9; /* เพิ่มเอฟเฟกต์ hover */
+}
+
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button.secondary {
+    background-color: #6c757d;
+}
+
+button.secondary:hover {
+    background-color: #5a6268;
+}
+
+/* การตั้งค่า Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px; /* ลด padding ในหน้าจอเล็ก */
+    }
+
+    .button-group {
+        flex-direction: column; /* ปรับปุ่มเรียงแนวตั้ง */
+        align-items: stretch;
+    }
+
+    .button-group button {
+        width: 100%; /* ปุ่มใช้ความกว้างเต็ม */
+        margin-bottom: 10px; /* เพิ่มระยะห่างระหว่างปุ่ม */
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.2em; /* ลดขนาดตัวอักษรในหน้าจอเล็ก */
+    }
+
+    button {
+        padding: 10px;
+        font-size: 14px; /* ลดขนาดตัวอักษรในปุ่ม */
+    }
+
+    .checkbox-group {
+        flex-direction: column; /* จัด checkbox ให้อยู่คนละบรรทัดในหน้าจอเล็ก */
+        align-items: flex-start;
+    }
+}

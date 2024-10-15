@@ -1,0 +1,224 @@
+@charset "utf-8";
+
+/* เพิ่มสินค้า Form */
+#add-product-form {
+    margin-top: 30px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.back-btn {
+    background-color: #F00; /* สีพื้นหลัง */
+    color: #FFF; /* สีตัวอักษร */
+    border: 1px solid #ccc; /* ขอบ */
+    padding: 10px 15px; /* Padding */
+    border-radius: 4px; /* มุมโค้ง */
+    cursor: pointer; /* รูปแบบลูกศร */
+    font-size: 16px; /* ขนาดตัวอักษร */
+    transition: background-color 0.3s; /* การเปลี่ยนสี */
+}
+
+.back-btn:hover {
+    background-color: #d4d4d4; /* เปลี่ยนสีเมื่อเอาเมาส์ไปวาง */
+}
+
+.add-product-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px; /* Set a max width for the form */
+    margin: 20px auto; /* Center the form */
+    padding: 20px;
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background color */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Style for labels */
+.add-product-form label {
+    margin-bottom: 5px; /* Space between label and input */
+    font-weight: bold; /* Make labels bold */
+}
+
+/* Style for input fields */
+.add-product-form input[type="text"],
+.add-product-form input[type="number"],
+.add-product-form textarea,
+.add-product-form select {
+    padding: 10px; /* Add padding */
+    margin-bottom: 15px; /* Space between fields */
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    transition: border-color 0.3s; /* Transition effect */
+}
+
+/* Change border color on focus */
+.add-product-form input[type="text"]:focus,
+.add-product-form input[type="number"]:focus,
+.add-product-form textarea:focus,
+.add-product-form select:focus {
+    border-color: #007bff; /* Change border color on focus */
+    outline: none; /* Remove outline */
+}
+
+/* Style for the submit button */
+.save-product-btn {
+    padding: 10px 15px; /* Padding for the button */
+    background-color: #007bff; /* Button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Transition effect */
+}
+
+/* Change background color on hover */
+.save-product-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Style for the footer */
+.footer {
+    text-align: center; /* Center the footer text */
+    margin-top: 20px; /* Space above the footer */
+    font-size: 14px; /* Font size for footer */
+    color: #666; /* Text color */
+}
+
+/* General Styles */
+body {
+    background-color: #f0f8ff; /* สีพื้นหลังอ่อน */
+    color: #333; /* สีตัวอักษร */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Admin dashboard container */
+.admin-dashboard-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap; /* สำหรับ responsive */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.sidebar h2 {
+    color: #ffffff;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    color: #ffdd57;
+}
+
+/* Admin content */
+.admin-content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.admin-content h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ff6f61;
+}
+
+h2 {
+    color: #6a11cb;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height: 100%;
+        width: 250px;
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+        transition: transform 0.3s ease;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .admin-content {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 375px) {
+    .admin-dashboard-container {
+        flex-direction: column; /* Stack sidebar and content vertically */
+        padding: 0; /* Remove excess padding */
+        width: 100vw; /* Full viewport width */
+        box-sizing: border-box; /* Include padding in width */
+    }
+
+    .sidebar, .admin-content, .footer {
+        width: 100vw; /* Full width for sidebar, content, and footer */
+        margin: 0;
+        padding: 10px;
+        box-sizing: border-box; /* Ensure padding fits within width */
+    }
+
+    .sidebar ul {
+        padding: 0;
+    }
+
+    .add-product-form input, .add-product-form textarea {
+        width: 100%; /* Full width for inputs */
+    }
+
+    .save-product-btn {
+        width: 100%; /* Full width for button */
+    }
+
+    .footer {
+        text-align: center;
+        padding: 10px 0;
+        background-color: #6a11cb;
+        color: white;
+        width: 100vw; /* Full width */
+    }
+}

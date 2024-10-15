@@ -1,0 +1,168 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif; /* ใช้ฟอนต์ที่อ่านง่าย */
+}
+
+/* Header */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    padding: 10px 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* จัดกลางแนวตั้ง */
+    width: 100%;
+}
+
+.logo img {
+    width: 150px; /* ขนาดโลโก้ */
+}
+
+.menu {
+    flex-grow: 1;
+}
+
+.menu ul {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* ระยะห่างระหว่างปุ่ม */
+}
+
+.actions input {
+    padding: 8px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    width: 200px; /* ความกว้างของกล่องค้นหา */
+    transition: border-color 0.3s ease;
+}
+
+.actions input:focus {
+    border-color: #007bff;
+}
+
+.actions i {
+    cursor: pointer;
+}
+
+.icon-user img, .icon-cart img {
+    width: 30px;
+}
+
+/* About Us */
+.container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.about-us {
+    background-color: white; /* พื้นหลังสีขาว */
+    border: 1px solid #ccc; /* กรอบสี่เหลี่ยม */
+    border-radius: 5px; /* มุมมน */
+    padding: 20px; /* ระยะห่างภายใน */
+    box-shadow: 0 2px 5px rgba(243, 239, 239, 0.1); /* เงาเบา */
+    max-width: 800px; /* กำหนดความกว้างสูงสุด */
+    width: 100%; /* ความกว้างเต็มที่ */
+}
+
+h3, h4 {
+    color: #333; /* สีหัวข้อ */
+}
+
+p, ul {
+    color: #555; /* สีข้อความ */
+}
+
+ul {
+    padding-left: 20px; /* ระยะห่างซ้ายสำหรับรายการ */
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Logout Button */
+.logout-button {
+    background-color: #dc3545; /* สีพื้นหลังปุ่มล็อกเอาท์ */
+    color: white; /* สีข้อความ */
+    border: none; /* ไม่มีกรอบ */
+    border-radius: 5px; /* มุมมน */
+    padding: 5px 10px; /* ระยะห่างภายใน */
+    cursor: pointer; /* เปลี่ยนเป็นรูปมือเมื่อชี้ไปที่ปุ่ม */
+}
+
+.logout-button:hover {
+    background-color: #c82333; /* สีพื้นหลังเมื่อเอาเมาส์ชี้ */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column; /* จัดแนวให้เป็นแนวตั้ง */
+        align-items: center; /* จัดกลางแนวตั้ง */
+    }
+
+    .menu ul {
+        flex-direction: column; /* จัดรายการเป็นแนวตั้ง */
+        align-items: center;
+    }
+
+    .actions {
+        margin-top: 10px; /* ระยะห่างด้านบน */
+        justify-content: center; /* จัดกลางในแนวนอน */
+    }
+
+    .about-us {
+        padding: 15px; /* ลดระยะห่างภายในในมือถือ */
+    }
+
+    .actions input {
+        width: 100%; /* ทำให้กล่องค้นหาเต็มที่ในมือถือ */
+        margin-bottom: 10px; /* ระยะห่างด้านล่าง */
+    }
+}
+
+@media (max-width: 480px) {
+    .actions input {
+        width: 80%; /* ลดความกว้างของกล่องค้นหาในมือถือเล็ก */
+    }
+
+    .menu ul li {
+        margin: 5px 0; /* ลดระยะห่างระหว่างรายการในมือถือ */
+    }
+
+    .about-us h3 {
+        font-size: 24px; /* ปรับขนาดหัวข้อในมือถือ */
+    }
+
+    .about-us h4 {
+        font-size: 20px; /* ปรับขนาดหัวข้อย่อยในมือถือ */
+    }
+}

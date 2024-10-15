@@ -1,0 +1,192 @@
+body {
+    background-color: #f0f8ff; /* สีพื้นหลังอ่อน */
+    color: #333; /* สีตัวอักษร */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.delete-btn {
+    background-color: #f44336; /* สีพื้นหลังแดง */
+    color: white; /* สีข้อความขาว */
+    border: none; /* ไม่มีขอบ */
+    padding: 8px 12px; /* ขนาดของปุ่ม */
+    border-radius: 4px; /* มุมปุ่มกลม */
+    cursor: pointer; /* แสดงเคอร์เซอร์เป็นมือเมื่อวางเหนือปุ่ม */
+    transition: background-color 0.3s; /* การเปลี่ยนสีพื้นหลัง */
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f; /* สีพื้นหลังเมื่อวางเมาส์ */
+}
+
+/* ปุ่มทั่วไป */
+.add-product-btn, 
+.edit-btn, 
+.delete-btn, 
+.save-settings-btn {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+/* ปุ่มเพิ่มสินค้า ที่มีลิงก์อยู่ภายใน */
+.add-product-btn a {
+    color: white; /* เปลี่ยนสีตัวอักษรในลิงก์ */
+    text-decoration: none; /* เอาขีดเส้นใต้ลิงก์ออก */
+    display: inline-block; /* ทำให้ลิงก์เป็นบล็อกเหมือนปุ่ม */
+    width: 100%; /* ทำให้ลิงก์กินพื้นที่เต็มปุ่ม */
+    height: 100%; /* ทำให้ลิงก์กินพื้นที่เต็มปุ่ม */
+    padding: 0; /* เพิ่ม padding ในลิงก์ */
+    box-sizing: border-box; /* ทำให้ padding มีผลต่อขนาดบล็อก */
+}
+
+/* Hover Effect สำหรับปุ่ม */
+.add-product-btn:hover, 
+.edit-btn:hover, 
+.delete-btn:hover, 
+.save-settings-btn:hover {
+    background-color: #ff3b30;
+}
+
+/* Admin dashboard container */
+.admin-dashboard-container {
+    display: flex; /* ใช้ flexbox เพื่อจัดวาง */
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-right: 20px; /* เพิ่มระยะห่างระหว่าง sidebar และ content */
+}
+
+.sidebar h2 {
+    color: #ffffff;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    color: #ffdd57;
+}
+
+/* Admin content */
+.admin-content {
+    flex: 1; /* ให้เนื้อหาหลักขยายเต็มพื้นที่ที่เหลือ */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.admin-content h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ff6f61;
+}
+
+h2 {
+    color: #6a11cb;
+}
+
+/* Tables */
+.product-table, .order-table, .customer-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #dddddd;
+}
+
+th {
+    background-color: #2575fc;
+    color: white;
+}
+
+/* Footer */
+.footer {
+    background-color: #6a11cb;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .admin-dashboard-container {
+        flex-direction: column; /* Stack sidebar and content vertically */
+    }
+
+    .sidebar {
+        width: 100%; /* Full width for sidebar */
+        margin-right: 0; /* No margin on the right */
+        margin-bottom: 20px; /* Add space below the sidebar */
+    }
+
+    .admin-content {
+        padding: 15px; /* Reduce padding */
+    }
+
+    .product-table, .order-table, .customer-table {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    th, td {
+        padding: 10px; /* Reduce padding */
+    }
+}
+
+@media (max-width: 375px) {
+    .add-product-btn, .edit-btn, .delete-btn, .save-settings-btn {
+        width: 100%; /* Full width for buttons */
+        margin-top: 10px; /* Space between buttons */
+    }
+
+    table, th, td {
+        font-size: 12px; /* Further reduce font size for very small screens */
+        padding: 8px; /* Reduce padding */
+    }
+
+    .footer {
+        padding: 10px 0;
+        width: 100vw; /* Ensure footer is full width */
+    }
+}
+
+/* New Styles for Button Container */
+.button-container {
+    display: flex;
+    gap: 10px; /* Spacing between buttons */
+}
